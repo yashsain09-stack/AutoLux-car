@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Details | AutoLux Car Showroom</title>
+  <meta name="description" content="View full technical specifications, performance data, features, and luxury financing options.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        Auto<span>Lux</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="inventory.html" class="nav-link">Cars / Inventory</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="book-test-drive.html" class="nav-link">Book a Test Drive</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="book-test-drive.html" class="btn btn-primary btn-sm btn-test-drive-header">
+          Book Test Drive
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="inventory.html" class="nav-link">Cars / Inventory</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="book-test-drive.html" class="nav-link">Book a Test Drive</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+    <a href="book-test-drive.html" class="btn btn-primary" style="margin-top: 12px; width: 100%;">Book Test Drive</a>
+  </div>
+
+  <!-- Breadcrumb & Details Hero -->
+  <main class="details-hero">
+    <div class="container">
+      <!-- Breadcrumb Navigation -->
+      <nav style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 28px;">
+        <a href="index.html" style="color: var(--text-secondary);">Home</a>
+        <span>/</span>
+        <a href="inventory.html" style="color: var(--text-secondary);">Inventory</a>
+        <span>/</span>
+        <span id="breadcrumbCar" style="color: var(--accent-cyan); font-weight: 600;">Vehicle</span>
+      </nav>
+
+      <!-- Details Main Grid (Gallery + Sticky Info Box) -->
+      <div class="details-grid">
+        <!-- Left: Interactive Gallery & Description -->
+        <div>
+          <div class="gallery-container">
+            <div class="gallery-main-image">
+              <img id="galleryMainImg" src="" alt="Car preview">
+            </div>
+            <!-- Thumbnails Slider/Grid -->
+            <div class="gallery-thumbs" id="galleryThumbs">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Vehicle Overview Description -->
+          <div style="margin-top: 40px; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 36px;">
+            <span class="section-label">Engineering Overview</span>
+            <h2 style="font-size: 1.6rem; margin: 12px 0 16px 0; color: #fff;">Vehicle Narrative & Heritage</h2>
+            <p id="carDesc" style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8;">
+              Loading vehicle description...
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Sticky Vehicle Info & CTA Box -->
+        <div>
+          <div class="details-info-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span id="carBrand" class="details-brand-pill">Brand</span>
+              <span id="carBadge" class="car-card-badge" style="position: static;">Featured</span>
+            </div>
+
+            <h1 id="carName" class="details-title">Vehicle Name</h1>
+
+            <div class="details-price-row">
+              <span id="carPrice" class="details-price-value">$000,000</span>
+              <span style="color: var(--text-muted); font-size: 0.9rem;">MSRP Base</span>
+            </div>
+
+            <!-- Quick Specs Badges -->
+            <div class="details-quick-specs">
+              <div class="quick-spec-card">
+                <div class="title">Showroom Status</div>
+                <div class="val" style="color: var(--success); display: flex; align-items: center; gap: 6px;">
+                  <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--success);"></span>
+                  In Stock Ready
+                </div>
+              </div>
+              <div class="quick-spec-card">
+                <div class="title">Inspection</div>
+                <div class="val">300+ Pt Certified</div>
+              </div>
+              <div class="quick-spec-card">
+                <div class="title">Warranty</div>
+                <div class="val">5 Yrs Included</div>
+              </div>
+              <div class="quick-spec-card">
+                <div class="title">Worldwide Transit</div>
+                <div class="val">Enclosed Carrier</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="details-actions-stack">
+              <a href="book-test-drive.html" class="btn btn-primary btn-lg btn-book-this-car">
+                Book VIP Test Drive
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#emiCalculator" class="btn btn-secondary">
+                Calculate Lease / Loan Payment
+              </a>
+              <a href="contact.html" class="btn btn-outline">
+                Inquire With Concierge
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Technical Specifications Matrix -->
+  <section class="section" style="background: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header text-left">
+        <span class="section-label">Performance Data</span>
+        <h2 class="section-title">Technical Specifications</h2>
+        <p class="section-subtitle">Factory verified diagnostic specifications and mechanical telemetry.</p>
+      </div>
+
+      <div id="specsGrid" class="specs-grid">
+        <!-- Spec tiles loaded by js/car-details.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Features List -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-left">
+        <span class="section-label">Equipment & Packages</span>
+        <h2 class="section-title">Standard & Optional Features</h2>
+        <p class="section-subtitle">Engineered with motorsport technologies and hand-tailored luxury appointments.</p>
+      </div>
+
+      <div id="featuresContainer" class="features-container">
+        <!-- Feature categories inserted dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Loan / EMI Calculator -->
+  <section class="section" id="emiCalculator" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Bespoke Financing</span>
+        <h2 class="section-title">Estimate Your Monthly Payment</h2>
+        <p class="section-subtitle">Customize down payment, loan tenure, and interest rates to preview your private lease or financing terms.</p>
+      </div>
+
+      <div class="calc-box">
+        <div class="calc-grid">
+          <!-- Sliders Controls -->
+          <div>
+            <!-- Down Payment Slider -->
+            <div class="form-group">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <label class="form-label">Down Payment (<span id="downPaymentDisplay">20%</span>)</label>
+                <span id="downPaymentAmount" style="color: var(--accent-cyan); font-weight: 700;">$0</span>
+              </div>
+              <input type="range" id="calcDownPayment" class="range-slider" min="10" max="50" step="5" value="20">
+            </div>
+
+            <!-- Loan Tenure Slider -->
+            <div class="form-group" style="margin-top: 24px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <label class="form-label">Loan Tenure</label>
+                <span id="tenureDisplay" style="color: var(--accent-cyan); font-weight: 700;">5 Years (60 Mos)</span>
+              </div>
+              <input type="range" id="calcTenure" class="range-slider" min="2" max="7" step="1" value="5">
+            </div>
+
+            <!-- Interest Rate Slider -->
+            <div class="form-group" style="margin-top: 24px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <label class="form-label">Estimated Interest Rate (APR)</label>
+                <span id="rateDisplay" style="color: var(--accent-cyan); font-weight: 700;">6.5% APR</span>
+              </div>
+              <input type="range" id="calcRate" class="range-slider" min="3.0" max="12.0" step="0.5" value="6.5">
+            </div>
+          </div>
+
+          <!-- Result Breakdown Card -->
+          <div class="calc-result-card">
+            <span class="section-label" style="background: rgba(59, 130, 246, 0.2);">Estimated Monthly Payment</span>
+            <div class="calc-result-number" id="calcMonthlyPayment">$0</div>
+            
+            <div class="booking-summary-card" style="margin: 20px 0 24px 0;">
+              <div class="booking-summary-row">
+                <span style="color: var(--text-muted);">Principal Financed:</span>
+                <strong id="calcTotalLoan" style="color: #fff;">$0</strong>
+              </div>
+              <div class="booking-summary-row">
+                <span style="color: var(--text-muted);">Estimated Total Interest:</span>
+                <strong id="calcTotalInterest" style="color: var(--accent-light);">$0</strong>
+              </div>
+            </div>
+
+            <a href="book-test-drive.html" class="btn btn-primary btn-book-this-car" style="width: 100%;">
+              Apply for Pre-Approval & Test Drive
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Similar Vehicles Section -->
+  <section class="section">
+    <div class="container">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <span class="section-label">Curated Alternatives</span>
+          <h2 class="section-title" style="margin-bottom: 8px;">Similar Luxury Vehicles</h2>
+          <p class="section-subtitle">Comparable performance vehicles from our elite inventory.</p>
+        </div>
+        <a href="inventory.html" class="btn btn-outline">Browse All</a>
+      </div>
+
+      <div id="similarCarsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+        <!-- Filled dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            Auto<span>Lux</span>
+          </a>
+          <p>
+            AutoLux is a world-class luxury car showroom and automotive concierge providing discerning drivers with verified prestige marques, exotic supercars, and bespoke private finance.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Cars / Inventory</a>
+            <a href="about.html">About Us</a>
+            <a href="book-test-drive.html">Book a Test Drive</a>
+            <a href="contact.html">Contact & Directions</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Showroom Hours</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: var(--text-secondary);">
+            <div><strong>Mon - Fri:</strong> 9:00 AM - 8:00 PM</div>
+            <div><strong>Saturday:</strong> 10:00 AM - 7:00 PM</div>
+            <div><strong>Sunday:</strong> VIP By Appointment</div>
+            <div style="margin-top: 10px; color: var(--accent-light);">
+              📞 +1 (800) 555-LUXE
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Private Client Services</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 16px;">
+            Need bespoke options, custom carbon fiber exterior treatments, or international tax-free export delivery?
+          </p>
+          <a href="contact.html" class="btn btn-outline btn-sm">
+            Contact Specialist
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AutoLux Car Showroom. All rights reserved. B.Tech Web Development Capstone Project.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/car-details.js"></script>
+</body>
+</html>

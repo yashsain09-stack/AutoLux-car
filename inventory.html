@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory & Supercars | AutoLux Car Showroom</title>
+  <meta name="description" content="Browse our premier collection of luxury vehicles, exotics, and electric grand tourers. Filter by brand, price, fuel, and transmission.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        Auto<span>Lux</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="inventory.html" class="nav-link">Cars / Inventory</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="book-test-drive.html" class="nav-link">Book a Test Drive</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="book-test-drive.html" class="btn btn-primary btn-sm btn-test-drive-header">
+          Book Test Drive
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="inventory.html" class="nav-link">Cars / Inventory</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="book-test-drive.html" class="nav-link">Book a Test Drive</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+    <a href="book-test-drive.html" class="btn btn-primary" style="margin-top: 12px; width: 100%;">Book Test Drive</a>
+  </div>
+
+  <!-- Inventory Header Banner -->
+  <section class="section-sm" style="background: linear-gradient(180deg, rgba(12, 17, 29, 0.9) 0%, rgba(7, 10, 18, 1) 100%); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="max-width: 720px;">
+        <span class="section-label">Showroom Inventory</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin: 12px 0 16px 0;">
+          Explore Our <span class="text-gradient">Luxury Fleet</span>
+        </h1>
+        <p style="color: var(--text-secondary); font-size: 1.05rem;">
+          Discover certified luxury sedans, track-proven supercars, and high-performance SUVs. Filter, compare, and reserve your private test drive experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Inventory Section -->
+  <section class="section" style="padding-top: 48px;">
+    <div class="container">
+      
+      <!-- Filter & Search Controls Card -->
+      <div class="inventory-controls">
+        <!-- Live Search Input -->
+        <div class="search-bar-wrap">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search by model, brand, engine, or keywords (e.g. Porsche, GT3, Electric, V8)...">
+          <button id="clearSearch" class="clear-search-btn" style="display: none;" title="Clear search">&times;</button>
+        </div>
+
+        <!-- Filter Grid -->
+        <div class="filter-grid">
+          <!-- Brand Filter -->
+          <div class="filter-group">
+            <label for="brandFilter" class="filter-label">Brand</label>
+            <select id="brandFilter" class="filter-select">
+              <option value="all">All Brands</option>
+            </select>
+          </div>
+
+          <!-- Price Range Filter -->
+          <div class="filter-group">
+            <div class="filter-label">
+              <span>Max Budget</span>
+              <span id="priceDisplay" style="color: var(--accent-cyan); font-weight: 700;">$400,000</span>
+            </div>
+            <div class="range-wrap">
+              <input type="range" id="priceRange" class="range-slider" min="50000" max="400000" step="10000" value="400000">
+            </div>
+          </div>
+
+          <!-- Fuel Type Filter -->
+          <div class="filter-group">
+            <label for="fuelFilter" class="filter-label">Powertrain / Fuel</label>
+            <select id="fuelFilter" class="filter-select">
+              <option value="all">All Powertrains</option>
+              <option value="Petrol">Petrol</option>
+              <option value="Electric">100% Electric</option>
+              <option value="Hybrid">Hybrid</option>
+            </select>
+          </div>
+
+          <!-- Transmission Filter -->
+          <div class="filter-group">
+            <label for="transmissionFilter" class="filter-label">Transmission</label>
+            <select id="transmissionFilter" class="filter-select">
+              <option value="all">All Transmissions</option>
+              <option value="Automatic">Automatic</option>
+              <option value="Dual-Clutch">Dual-Clutch / F1</option>
+            </select>
+          </div>
+
+          <!-- Reset Filter Button -->
+          <div class="filter-group" style="justify-content: flex-end;">
+            <button id="resetFiltersBtn" class="btn btn-secondary" style="height: 48px; width: 100%;">
+              Reset Filters
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inventory Meta Bar (Count & Sort) -->
+      <div class="inventory-meta-bar">
+        <div id="resultsCount" class="results-count">
+          Showing <strong>12</strong> of <strong>12</strong> luxury vehicles
+        </div>
+
+        <div class="sort-group">
+          <label for="sortSelect" class="sort-label">Sort by:</label>
+          <select id="sortSelect" class="filter-select" style="width: auto; padding: 8px 36px 8px 14px; height: 42px;">
+            <option value="default">Featured First</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="hp-desc">Horsepower: High to Low</option>
+            <option value="year-desc">Year: Newest First</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Cars Grid Container -->
+      <div id="inventoryGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 32px;">
+        <!-- Vehicle cards dynamically inserted by js/inventory.js -->
+      </div>
+
+      <!-- Empty State Fallback -->
+      <div id="emptyState" style="display: none; text-align: center; padding: 80px 24px; background: var(--bg-surface); border: 1px dashed var(--border-subtle); border-radius: var(--radius-xl); margin-top: 24px;">
+        <div style="width: 72px; height: 72px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); margin: 0 auto 20px auto;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+        </div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 8px; color: #fff;">No Vehicles Match Your Criteria</h3>
+        <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto 24px auto;">
+          Try adjusting your price slider, clearing search keywords, or selecting different brand filters.
+        </p>
+        <button id="emptyResetBtn" class="btn btn-primary">
+          Reset All Filters
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            Auto<span>Lux</span>
+          </a>
+          <p>
+            AutoLux is a world-class luxury car showroom and automotive concierge providing discerning drivers with verified prestige marques, exotic supercars, and bespoke private finance.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Cars / Inventory</a>
+            <a href="about.html">About Us</a>
+            <a href="book-test-drive.html">Book a Test Drive</a>
+            <a href="contact.html">Contact & Directions</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Showroom Hours</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: var(--text-secondary);">
+            <div><strong>Mon - Fri:</strong> 9:00 AM - 8:00 PM</div>
+            <div><strong>Saturday:</strong> 10:00 AM - 7:00 PM</div>
+            <div><strong>Sunday:</strong> VIP By Appointment</div>
+            <div style="margin-top: 10px; color: var(--accent-light);">
+              📞 +1 (800) 555-LUXE
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Need Assistance?</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 16px;">
+            Looking for an off-market or allocation vehicle? Speak with our acquisition specialists.
+          </p>
+          <a href="contact.html" class="btn btn-outline btn-sm">
+            Contact Specialist
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AutoLux Car Showroom. All rights reserved. B.Tech Web Development Capstone Project.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/inventory.js"></script>
+</body>
+</html>

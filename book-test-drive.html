@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Test Drive | AutoLux Car Showroom</title>
+  <meta name="description" content="Reserve your private, white-glove test drive appointment with an AutoLux performance specialist.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        Auto<span>Lux</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="inventory.html" class="nav-link">Cars / Inventory</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="book-test-drive.html" class="nav-link">Book a Test Drive</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="book-test-drive.html" class="btn btn-primary btn-sm btn-test-drive-header">
+          Book Test Drive
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="inventory.html" class="nav-link">Cars / Inventory</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="book-test-drive.html" class="nav-link">Book a Test Drive</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+  </div>
+
+  <!-- Page Header Banner -->
+  <section class="section-sm" style="background: linear-gradient(180deg, rgba(12, 17, 29, 0.9) 0%, rgba(7, 10, 18, 1) 100%); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="max-width: 760px;">
+        <span class="section-label">VIP Private Experience</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin: 12px 0 16px 0;">
+          Reserve Your <span class="text-gradient">Test Drive</span>
+        </h1>
+        <p style="color: var(--text-secondary); font-size: 1.05rem;">
+          Get behind the wheel of your dream vehicle with an accompanied track or coastal highway drive guided by our factory-certified master technicians.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form & Experience Section -->
+  <section class="section" style="padding-top: 56px;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: flex-start;" class="details-grid">
+        
+        <!-- Left: Booking Form Card -->
+        <div class="form-card">
+          <h2 style="font-size: 1.6rem; margin-bottom: 24px; color: #fff;">Schedule Your Appointment</h2>
+          
+          <form id="testDriveForm" novalidate>
+            <!-- 2-Column Name & Email -->
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="fullName" class="form-label">Full Legal Name <span class="req">*</span></label>
+                <input type="text" id="fullName" class="form-control" placeholder="e.g. Alexander Hamilton" required>
+                <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="emailAddress" class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" id="emailAddress" class="form-control" placeholder="alexander@domain.com" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+            </div>
+
+            <!-- 2-Column Phone & Car Model -->
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="phoneNumber" class="form-label">Phone Number <span class="req">*</span></label>
+                <input type="tel" id="phoneNumber" class="form-control" placeholder="+1 (555) 000-0000" required>
+                <div class="invalid-feedback">Please provide a valid 10-digit phone number.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="carModelSelect" class="form-label">Select Vehicle <span class="req">*</span></label>
+                <select id="carModelSelect" class="form-control" required>
+                  <option value="">-- Choose Desired Model --</option>
+                </select>
+                <div class="invalid-feedback">Please choose a vehicle model.</div>
+              </div>
+            </div>
+
+            <!-- 2-Column Preferred Date & Time -->
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="preferredDate" class="form-label">Preferred Date <span class="req">*</span></label>
+                <input type="date" id="preferredDate" class="form-control" required>
+                <div class="invalid-feedback">Please select a valid future date.</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Preferred Time Window <span class="req">*</span></label>
+                <div class="slot-grid">
+                  <div class="slot-pill active" data-time="10:00 AM">10:00 AM</div>
+                  <div class="slot-pill" data-time="11:30 AM">11:30 AM</div>
+                  <div class="slot-pill" data-time="2:00 PM">2:00 PM</div>
+                  <div class="slot-pill" data-time="3:30 PM">3:30 PM</div>
+                  <div class="slot-pill" data-time="5:00 PM">5:00 PM</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Special Requests / Notes -->
+            <div class="form-group">
+              <label for="specialNotes" class="form-label">Special Requests or Driving Experience Notes (Optional)</label>
+              <textarea id="specialNotes" class="form-control" placeholder="Mention preferred driving route (canyon, highway, or circuit), acceleration demonstration, or co-pilot preferences..."></textarea>
+            </div>
+
+            <!-- License Requirement Checkbox -->
+            <label class="checkbox-wrap">
+              <input type="checkbox" id="licenseCheck" required>
+              <span>
+                I confirm that I am at least 21 years of age and hold a current, valid government-issued driver's license which will be presented upon arrival at the showroom.
+              </span>
+            </label>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              Confirm VIP Test Drive Reservation
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: VIP Test Drive Guarantee & Concierge Info -->
+        <div>
+          <div class="glass-card" style="padding: 36px;">
+            <span class="section-label">VIP Protocol</span>
+            <h3 style="font-size: 1.4rem; margin: 10px 0 20px 0; color: #fff;">The AutoLux Test Drive Protocol</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 22px;">
+              <div style="display: flex; gap: 16px;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); flex-shrink: 0;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div>
+                  <h4 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">Comprehensive Insurance</h4>
+                  <p style="font-size: 0.88rem; color: var(--text-secondary);">Full comprehensive umbrella insurance is provided throughout the entire test drive session with zero liability to you.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 16px;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); flex-shrink: 0;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                </div>
+                <div>
+                  <h4 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">Dynamic Performance Route</h4>
+                  <p style="font-size: 0.88rem; color: var(--text-secondary);">Experience city refinement, high-speed motorway acceleration, and cornering agility on our dedicated test track loop.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 16px;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); flex-shrink: 0;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <div>
+                  <h4 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">Dedicated Product Specialist</h4>
+                  <p style="font-size: 0.88rem; color: var(--text-secondary);">A marque-certified specialist will accompany you to walk through telemetry, custom launch control, and infotainment features.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Hotline Callout -->
+            <div style="margin-top: 32px; padding: 20px; background: rgba(255, 255, 255, 0.03); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Direct VIP Concierge</div>
+                <div style="font-size: 1.15rem; font-weight: 700; color: var(--accent-cyan);">+1 (800) 555-LUXE</div>
+              </div>
+              <a href="contact.html" class="btn btn-secondary btn-sm">Direct Desk</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Confirmation Modal -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-content">
+      <div class="modal-icon-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h2 style="font-size: 1.8rem; margin-bottom: 8px; color: #fff;">Reservation Confirmed!</h2>
+      <p style="color: var(--text-secondary); font-size: 0.95rem;">
+        Your VIP test drive appointment has been officially registered in our concierge calendar.
+      </p>
+
+      <div class="booking-summary-card">
+        <div class="booking-summary-row">
+          <span style="color: var(--text-muted);">Reference Code:</span>
+          <strong id="modalRefCode" style="color: var(--accent-cyan); letter-spacing: 0.08em;">ALX-2024-0000</strong>
+        </div>
+        <div class="booking-summary-row">
+          <span style="color: var(--text-muted);">Guest Name:</span>
+          <strong id="modalName" style="color: #fff;">Guest</strong>
+        </div>
+        <div class="booking-summary-row">
+          <span style="color: var(--text-muted);">Vehicle Selected:</span>
+          <strong id="modalCar" style="color: #fff;">Porsche 911 GT3</strong>
+        </div>
+        <div class="booking-summary-row">
+          <span style="color: var(--text-muted);">Appointment Slot:</span>
+          <strong id="modalDateTime" style="color: #fff;">Tomorrow at 10:00 AM</strong>
+        </div>
+        <div class="booking-summary-row">
+          <span style="color: var(--text-muted);">Showroom:</span>
+          <strong style="color: #fff;">AutoLux Beverly Hills Flagship</strong>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 14px; justify-content: center;">
+        <button id="closeModalBtn" class="btn btn-primary btn-lg" style="width: 100%;">
+          Close & Return to Showroom
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            Auto<span>Lux</span>
+          </a>
+          <p>
+            AutoLux is a world-class luxury car showroom and automotive concierge providing discerning drivers with verified prestige marques, exotic supercars, and bespoke private finance.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Cars / Inventory</a>
+            <a href="about.html">About Us</a>
+            <a href="book-test-drive.html">Book a Test Drive</a>
+            <a href="contact.html">Contact & Directions</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Showroom Hours</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: var(--text-secondary);">
+            <div><strong>Mon - Fri:</strong> 9:00 AM - 8:00 PM</div>
+            <div><strong>Saturday:</strong> 10:00 AM - 7:00 PM</div>
+            <div><strong>Sunday:</strong> VIP By Appointment</div>
+            <div style="margin-top: 10px; color: var(--accent-light);">
+              📞 +1 (800) 555-LUXE
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Private Client Services</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 16px;">
+            Have questions regarding trade-ins, custom delivery or international export?
+          </p>
+          <a href="contact.html" class="btn btn-outline btn-sm">
+            Speak to Concierge
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AutoLux Car Showroom. All rights reserved. B.Tech Web Development Capstone Project.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/test-drive.js"></script>
+</body>
+</html>

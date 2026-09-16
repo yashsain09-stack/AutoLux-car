@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoLux Car Showroom | Find Your Perfect Drive</title>
+  <meta name="description" content="Discover the finest collection of luxury, exotic, and high-performance supercars at AutoLux Car Showroom.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        Auto<span>Lux</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="inventory.html" class="nav-link">Cars / Inventory</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="book-test-drive.html" class="nav-link">Book a Test Drive</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="book-test-drive.html" class="btn btn-primary btn-sm btn-test-drive-header">
+          Book Test Drive
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="inventory.html" class="nav-link">Cars / Inventory</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="book-test-drive.html" class="nav-link">Book a Test Drive</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+    <a href="book-test-drive.html" class="btn btn-primary" style="margin-top: 12px; width: 100%;">Book Test Drive</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" style="position: relative; min-height: 90vh; display: flex; align-items: center; background: linear-gradient(180deg, rgba(7, 10, 18, 0.4) 0%, rgba(7, 10, 18, 0.95) 100%), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat; padding: 120px 0;">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div style="max-width: 780px;">
+        <span class="section-label">Premier Luxury Automotive Gallery</span>
+        <h1 style="font-size: clamp(2.8rem, 5.5vw, 4.5rem); font-weight: 800; line-height: 1.1; margin: 16px 0 24px 0;">
+          Find Your <span class="text-gradient">Perfect Drive</span>
+        </h1>
+        <p style="font-size: clamp(1.05rem, 1.8vw, 1.25rem); color: var(--text-secondary); margin-bottom: 36px; max-width: 640px;">
+          Experience an unrivaled curation of the world’s most prestigious marques, track-bred supercars, and state-of-the-art electric grand tourers tailored for the discerning driver.
+        </p>
+        <div class="hero-actions" style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 56px;">
+          <a href="inventory.html" class="btn btn-primary btn-lg">
+            Explore Cars
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="book-test-drive.html" class="btn btn-secondary btn-lg">
+            Book a Test Drive
+          </a>
+        </div>
+
+        <!-- Quick Stats Row -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; border-top: 1px solid var(--border-subtle); padding-top: 32px;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: #fff;">1,020 <span style="font-size: 1.1rem; color: var(--accent-cyan);">HP</span></div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Max Peak Output</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: #fff;">1.99 <span style="font-size: 1.1rem; color: var(--accent-cyan);">SEC</span></div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">0-60 Acceleration</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: #fff;">300+ <span style="font-size: 1.1rem; color: var(--accent-cyan);">PTS</span></div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Certified Inspection</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: #fff;">100%</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">White-Glove Delivery</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Brands Section -->
+  <section class="section" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Prestige Marques</span>
+        <h2 class="section-title">Explore Popular Brands</h2>
+        <p class="section-subtitle">Select from world-renowned automotive manufacturers engineered for unprecedented performance and prestige.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px;">
+        <a href="inventory.html?brand=Porsche" class="glass-card" style="padding: 24px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
+          </div>
+          <h4 style="font-size: 1.15rem; color: #fff;">Porsche</h4>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Motorsport Pedigree</span>
+        </a>
+
+        <a href="inventory.html?brand=BMW" class="glass-card" style="padding: 24px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+          </div>
+          <h4 style="font-size: 1.15rem; color: #fff;">BMW M</h4>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Ultimate Driving Machine</span>
+        </a>
+
+        <a href="inventory.html?brand=Mercedes-Benz" class="glass-card" style="padding: 24px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h4 style="font-size: 1.15rem; color: #fff;">Mercedes-AMG</h4>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Handcrafted Velocity</span>
+        </a>
+
+        <a href="inventory.html?brand=Audi" class="glass-card" style="padding: 24px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="12" r="4"></circle><circle cx="12" cy="12" r="4"></circle><circle cx="17" cy="12" r="4"></circle></svg>
+          </div>
+          <h4 style="font-size: 1.15rem; color: #fff;">Audi Sport</h4>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Vorsprung Durch Technik</span>
+        </a>
+
+        <a href="inventory.html?brand=Tesla" class="glass-card" style="padding: 24px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <h4 style="font-size: 1.15rem; color: #fff;">Tesla</h4>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Hyper Electric Plaid</span>
+        </a>
+
+        <a href="inventory.html?brand=Ferrari" class="glass-card" style="padding: 24px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          </div>
+          <h4 style="font-size: 1.15rem; color: #fff;">Ferrari</h4>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Maranello Passion</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Cars Section -->
+  <section class="section">
+    <div class="container">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <span class="section-label">Handpicked Collection</span>
+          <h2 class="section-title" style="margin-bottom: 8px;">Featured Showroom Cars</h2>
+          <p class="section-subtitle">Exemplary supercars and luxury vehicles currently commanding our showroom floor.</p>
+        </div>
+        <a href="inventory.html" class="btn btn-outline">
+          View All Inventory
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+      <div id="featuredCarsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+        <!-- Dynamically filled by script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section" style="background: var(--bg-surface); position: relative; overflow: hidden;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The AutoLux Difference</span>
+        <h2 class="section-title">Why Choose AutoLux</h2>
+        <p class="section-subtitle">We have redefined the luxury car purchasing experience with transparent integrity and white-glove concierge standards.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
+        <div class="glass-card" style="padding: 36px 28px;">
+          <div style="width: 56px; height: 56px; border-radius: var(--radius-md); background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); margin-bottom: 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: #fff;">Certified Master Diagnostics</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Every vehicle undergoes an intensive 300+ point certified inspection covering laser chassis alignment, engine compression, electronics, and paint depth analysis.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 36px 28px;">
+          <div style="width: 56px; height: 56px; border-radius: var(--radius-md); background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); margin-bottom: 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: #fff;">Bespoke Private Financing</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Collaborate with our in-house luxury finance specialists to tailor bespoke leasing, structured balloon payments, and low competitive APR terms matching your financial portfolio.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 36px 28px;">
+          <div style="width: 56px; height: 56px; border-radius: var(--radius-md); background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); margin-bottom: 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: #fff;">Enclosed White-Glove Delivery</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Climate-controlled, fully enclosed nationwide delivery directly to your estate or corporate hangar with personal vehicle orientation by a product specialist.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 36px 28px;">
+          <div style="width: 56px; height: 56px; border-radius: var(--radius-md); background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); margin-bottom: 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+          </div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: #fff;">Comprehensive 5-Year Warranty</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">All AutoLux vehicles feature comprehensive 5-year bumper-to-bumper and powertrain coverage, 24/7 VIP roadside assistance, and complimentary annual services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews / Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Verified Client Stories</span>
+        <h2 class="section-title">Customer Reviews</h2>
+        <p class="section-subtitle">Read reflections from owners who found their dream vehicle at AutoLux Showroom.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+        <div class="glass-card" style="padding: 36px 32px;">
+          <div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 16px;">★★★★★</div>
+          <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.7;">
+            "The acquisition experience for my Porsche 911 GT3 was flawless. AutoLux’s staff understood every option code, track setup nuance, and arranged enclosed transport seamlessly."
+          </p>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Sarah Jenkins" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-cyan);">
+            <div>
+              <h4 style="font-size: 1rem; color: #fff;">Sarah Jenkins</h4>
+              <span style="font-size: 0.8rem; color: var(--accent-light);">Purchased Porsche 911 GT3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 36px 32px;">
+          <div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 16px;">★★★★★</div>
+          <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.7;">
+            "Booking a private test drive through their portal was refreshingly fast. Within two days I had the Audi RS e-tron GT ready on the track. Exceptional level of professionalism."
+          </p>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="David Sterling" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-cyan);">
+            <div>
+              <h4 style="font-size: 1rem; color: #fff;">David Sterling</h4>
+              <span style="font-size: 0.8rem; color: var(--accent-light);">Purchased Audi RS e-tron GT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 36px 32px;">
+          <div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 16px;">★★★★★</div>
+          <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.7;">
+            "AutoLux sets the benchmark for high-end luxury showrooms. From custom tailored lease rates to instant concierge communication, I cannot recommend them highly enough."
+          </p>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Marcus Vance" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-cyan);">
+            <div>
+              <h4 style="font-size: 1rem; color: #fff;">Marcus Vance</h4>
+              <span style="font-size: 0.8rem; color: var(--accent-light);">Purchased AMG GT 63 S</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-sm" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(12, 17, 29, 0.95) 100%); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 28px;">
+      <div>
+        <h2 style="font-size: 2rem; margin-bottom: 8px;">Ready to Experience Ultimate Performance?</h2>
+        <p style="color: var(--text-secondary); max-width: 580px;">Schedule your private, VIP consultation and track test drive session with an AutoLux specialist today.</p>
+      </div>
+      <a href="book-test-drive.html" class="btn btn-primary btn-lg">
+        Schedule VIP Test Drive
+      </a>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            Auto<span>Lux</span>
+          </a>
+          <p>
+            AutoLux is a world-class luxury car showroom and automotive concierge providing discerning drivers with verified prestige marques, exotic supercars, and bespoke private finance.
+          </p>
+          <div style="display: flex; gap: 14px; color: var(--accent-cyan);">
+            <span style="font-weight: 600; font-size: 0.85rem; color: var(--text-muted);">Beverly Hills Flagship • London • Monaco</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Cars / Inventory</a>
+            <a href="about.html">About Us</a>
+            <a href="book-test-drive.html">Book a Test Drive</a>
+            <a href="contact.html">Contact & Directions</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Showroom Hours</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: var(--text-secondary);">
+            <div><strong>Mon - Fri:</strong> 9:00 AM - 8:00 PM</div>
+            <div><strong>Saturday:</strong> 10:00 AM - 7:00 PM</div>
+            <div><strong>Sunday:</strong> VIP By Appointment</div>
+            <div style="margin-top: 10px; color: var(--accent-light);">
+              📞 +1 (800) 555-LUXE
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Exclusive Newsletter</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 12px;">
+            Receive private notifications of unlisted arrivals, bespoke track invitations, and private collector sales.
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed to AutoLux Private Wire!', 'success'); this.reset();">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AutoLux Car Showroom. All rights reserved. B.Tech Web Development Capstone Project.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Vehicle Disclaimers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Populate Featured Cars on Home Page
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('featuredCarsGrid');
+      if (container) {
+        const featured = getFeaturedCars().slice(0, 3);
+        container.innerHTML = featured.map(car => createCarCardHTML(car)).join('');
+      }
+    });
+  </script>
+</body>
+</html>
