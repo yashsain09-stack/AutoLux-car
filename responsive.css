@@ -1,0 +1,171 @@
+/* ==========================================================================
+   AutoLux Car Showroom - Responsive Styles
+   Breakpoints for Tablets, Mobile, and Ultra-Wide Displays
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Laptops & Small Desktops (<= 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  :root {
+    --max-width: 1080px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets (<= 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .details-info-box {
+    position: static;
+  }
+
+  .calc-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about-story-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Landscape & Large Phones (<= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-actions .btn-test-drive-header {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    height: 72px;
+  }
+
+  .mobile-nav {
+    top: 72px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-card {
+    padding: 24px;
+  }
+
+  .gallery-main-image {
+    height: 300px;
+  }
+
+  .gallery-thumbs {
+    gap: 8px;
+  }
+
+  .thumb-item {
+    height: 64px;
+  }
+
+  .car-card-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inventory-controls {
+    padding: 20px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .calc-box {
+    padding: 24px;
+  }
+
+  .calc-result-number {
+    font-size: 2.2rem;
+  }
+
+  .modal-content {
+    padding: 28px 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Phones (<= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .brand-logo {
+    font-size: 1.3rem;
+  }
+
+  .car-card-specs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slot-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .toast {
+    min-width: calc(100vw - 32px);
+    max-width: calc(100vw - 32px);
+  }
+}
